@@ -8,7 +8,7 @@ Elections in India and in many developing countries have many security issues to
   ## The Solution
 So our solution is to setup an electronic ballot portal which can be accessed remotely. The system can be guaranteed to be secure as the votes are directly recorded on a Blockchain based Ledger. This project will aid in making the voting system much more transparent and reliable than the technology currently being employed. This will also enable the votes to be counted almost immediately  as the entire process takes place online.
 <br>
-Azure Blockchain based on Ethereum for Smart Contracts provides a robust platform for scalable Blochain based Ledgers. Constructing a consensus protocol for free and fair elections will be revolutionized using this technology. This Ledger also ensures Security.
+Azure Blockchain based on Ethereum for Smart Contracts provides a robust platform for scalable Blockchain based Ledgers. Constructing a consensus protocol for free and fair elections will be revolutionized using this technology. This Ledger also ensures Security.
   <br>
   
   ## Technology Stack
