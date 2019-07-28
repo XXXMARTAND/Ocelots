@@ -1,5 +1,5 @@
 # Ocelots
-##The Problem
+## The Problem
 <HR>
 Elections in India and in many developing countries have many security issues to deal with. There also exist several logistics hindrances like center allotment, secure transportation of EVMs etc. In addition many groups of people sometimes find it difficult to reach a center to  exercise their voting right. This maybe due to a number of reasons such as living in a different state, traveling overseas, being physically disabled etc. 
 <br>
