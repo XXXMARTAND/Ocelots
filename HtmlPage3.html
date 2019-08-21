@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>Voting Portal</h1>
+
+
+    <div class="form-group">
+        <input id="q1" type="text" name="LGform1_user" class="form-control" placeholder="Address" value="" required="" />
+        <button type="button" onclick="loadDoc()">Winner</button>
+    </div>
+    <div class="form-group">
+
+    </div>
+    <p id="demo"></p>
+
+    <script>
+        function loadDoc() {
+            
+            var y = document.getElementById("q1").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://prod-28.southeastasia.logic.azure.com/workflows/a0c3a5055ee84e63bdf6c8fb575d10f8/triggers/manual/paths/invoke/add/"+y+"/winner?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=_cFZHbslDp1107D7rK2liuECM9PXF2GwrSvbApfJ-po", true);
+            xhttp.send();
+        }
+    </script>
+
+</body>
+</html>
