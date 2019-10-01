@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Welcome to President's Portal</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <style>
+   body 
+  {
+    background: #007bff;
+    background: linear-gradient(to right, #0062E6, #33AEFF);
+  }
+
+  .card-signin 
+ {
+   border: 0;
+   border-radius: 1rem;
+   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+ }
+
+ .card-signin .card-title 
+ {
+   margin-bottom: 2rem;
+   font-weight: 300;
+   font-size: 1.5rem;
+ }
+
+ .card-signin .card-body 
+ {
+   padding: 2rem;
+ }
+
+ .form-signin 
+ {
+   width: 100%;
+ }
+
+ .form-signin .btn 
+ {
+   font-size: 80%;
+   border-radius: 5rem;
+   letter-spacing: .1rem;
+   font-weight: bold;
+   padding: 1rem;
+   transition: all 0.2s;
+ }
+
+  .custom-file
+  {
+     margin-bottom:10px; 
+  }
+
+  .form-label-group input::placeholder 
+  {
+    color: transparent;
+  }
+</style>  
+ </head>
+<body>
+ <script type="text/javascript">
+  function loadDoc() {
+            var x = document.getElementById("q1").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://prod-22.southeastasia.logic.azure.com/workflows/68194709ceb84eb0a09e31bebd3bdd99/triggers/manual/paths/invoke/token/" + x + "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hdqTYAvosPRYOfqLAINEMZcedBiSQaRBC6ILaNg0MKE", true);
+            xhttp.send();
+        }
+        function allow() {
+            var y = document.getElementById("q2").value;
+            var z = document.getElementById("q3").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo1").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://prod-30.southeastasia.logic.azure.com/workflows/da012ab1d39e4d9c9be54c01ac2365c0/triggers/manual/paths/invoke/id/" + y + "/add/" + z + "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c8bzeK6akPe0hzLsumDNt1i6x6SNW_zw5wl-lXPktjo", true);
+            xhttp.send();
+        }
+        function vote() {
+            var a = document.getElementById("qa").value;
+            var b = document.getElementById("qb").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo2").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://prod-08.southeastasia.logic.azure.com/workflows/b999ee2d17e94a3599ca9ad7ab8be87d/triggers/manual/paths/invoke/add/" + a + "/vote/" + b + "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fxrLxvGBLeWhlARwLVLW3INpWyfRCigsJp6RU0pcYTA", true);
+            xhttp.send();
+        }
+    </script>
+    <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h1 class="card-title text-center">President Portal Form</h1>
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h2 class="card-title text-center">Ballot Entry</h2>
+                <form class="form-signin">
+                  <div class="form-group">
+                  <label for="name">Ballot Size</label>
+                  <input type="text" id="q1" class="form-control" placeholder="Enter the ballot size" required autofocus>        
+                </div>  
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="loadDoc()">Add</button>     
+               </form>
+              </div>
+            </div>
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h2 class="card-title text-center">Allow to Vote</h2>
+                <form class="form-signin">
+                  <div class="form-group">
+                  <label for="name">ID</label>
+                  <input type="text" id="q2" class="form-control" placeholder="Enter your voter id" required autofocus>        
+                  
+                  <label for="name">Address</label>
+                  <input type="text" id="q3" class="form-control" placeholder="Enter the address" required autofocus>        
+                </div>  
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="allow()">Allow</button>     
+               </form>
+              </div>
+            </div>
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h2 class="card-title text-center">Vote to</h2>
+                <form class="form-signin">
+                  <div class="form-group">
+                  <label for="name">Vote</label>
+                  <input type="text" id="qb" class="form-control" placeholder="Cast your vote here" required autofocus>        
+                  
+                  <label for="name">Address</label>
+                  <input type="text" id="qa" class="form-control" placeholder="Enter the address" required autofocus>        
+                </div>  
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" onclick="vote()">Cast</button>     
+               </form>
+              </div>
+            </div>
+            <pre class="tab">
+             <a href="votingportal.html">Click here for Voting portal</a>
+
+
+             <a href="winnerportal.html">Click here for Winner portal</a>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>
+
+<!--div class="form-group">
+        <input id="q1" type="text" name="LGform1_user" class="form-control" placeholder="Enter Ballot size" value="" required="" />
+        <button type="button" onclick="loadDoc()">Add</button>
+    </div>
+    <div class="form-group">
+
+    </div>
+    <p id="demo"></p>
+    <h3>Allow to vote</h3>
+
+    <div class="form-group">
+        <input id="q2" type="text" name="LGform1_user" class="form-control" placeholder="Enter ID " value="" required="" />
+        <input id="q3" type="text" name="LGform1_user" class="form-control" placeholder="Enter address " value="" required="" />
+        <button type="button" onclick="allow()">Allow</button>
+    </div>
+    <div class="form-group">
+
+    </div>
+    <p id="demo1"></p>
+    <h3>Vote</h3>
+
+    <div class="form-group">
+        <input id="qb" type="text" name="LGform1_user" class="form-control" placeholder="Vote to" value="" required="" />
+        <input id="qa" type="text" name="LGform1_user" class="form-control" placeholder="Enter address " value="" required="" />
+        <button type="button" onclick="vote()">Cast</button>
+    </div>
+    <div class="form-group">
+
+    </div>
+    <p id="demo2"></p>
+
+ 
