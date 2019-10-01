@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+
+    <h1>President's portal</h1>
+
+
+    <div class="form-group">
+        <input id="q1" type="text" name="LGform1_user" class="form-control" placeholder="Enter Ballot size" value="" required="" />
+        <button type="button" onclick="loadDoc()">Add</button>
+    </div>
+    <div class="form-group">
+
+    </div>
+    <p id="demo"></p>
+    <h3>Allow to vote</h3>
+
+    <div class="form-group">
+        <input id="q2" type="text" name="LGform1_user" class="form-control" placeholder="Enter ID " value="" required="" />
+        <input id="q3" type="text" name="LGform1_user" class="form-control" placeholder="Enter address " value="" required="" />
+        <button type="button" onclick="allow()">Allow</button>
+    </div>
+    <div class="form-group">
+
+    </div>
+    <p id="demo1"></p>
+    <h3>Vote</h3>
+
+    <div class="form-group">
+        <input id="qb" type="text" name="LGform1_user" class="form-control" placeholder="Vote to" value="" required="" />
+        <input id="qa" type="text" name="LGform1_user" class="form-control" placeholder="Enter address " value="" required="" />
+        <button type="button" onclick="vote()">Cast</button>
+    </div>
+    <div class="form-group">
+
+    </div>
+    <p id="demo2"></p>
+
+    <script>
+        function loadDoc() {
+            var x = document.getElementById("q1").value;
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://prod-22.southeastasia.logic.azure.com/workflows/68194709ceb84eb0a09e31bebd3bdd99/triggers/manual/paths/invoke/token/" + x + "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=hdqTYAvosPRYOfqLAINEMZcedBiSQaRBC6ILaNg0MKE", true);
+            xhttp.send();
+        }
+        function allow() {
+            var y = document.getElementById("q2").value;
+            var z = document.getElementById("q3").value;
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo1").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://prod-30.southeastasia.logic.azure.com/workflows/da012ab1d39e4d9c9be54c01ac2365c0/triggers/manual/paths/invoke/id/" + y + "/add/" + z + "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=c8bzeK6akPe0hzLsumDNt1i6x6SNW_zw5wl-lXPktjo", true);
+            xhttp.send();
+        }
+        function vote() {
+            var a = document.getElementById("qa").value;
+            var b = document.getElementById("qb").value;
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo2").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "https://prod-08.southeastasia.logic.azure.com/workflows/b999ee2d17e94a3599ca9ad7ab8be87d/triggers/manual/paths/invoke/add/" + a + "/vote/" + b + "?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=fxrLxvGBLeWhlARwLVLW3INpWyfRCigsJp6RU0pcYTA", true);
+            xhttp.send();
+        }
+    </script>
+    <a href="HtmlPage2.html">Regular portal</a>
+    <a href="HtmlPage3.html">Winner</a>
+
+</body>
+</html>
