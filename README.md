@@ -12,4 +12,4 @@ Azure Blockchain based on Ethereum for Smart Contracts provides a robust platfor
   <br>
   
   ## Technology Stack
-  The technology stack we plan to employ is Azure Blockchain, Azure Cloud, Microsoft Azure SQL DB, Microsoft Azure NoSQL DB, Entity Framework, Windows Communication Foundation, c#.NET Framework, Microsoft Azure Cosmos DB, Ethereum Smart Contracts using Pragma Solidity, Standard Government Data Sets
+  The technology stack we plan to employ is Azure Blockchain, Azure Cloud, Microsoft Azure SQL DB, Microsoft Azure NoSQL DB, Entity Framework, Windows Communication Foundation, c#.NET Framework, Microsoft Azure Cosmos DB, Ethereum Smart Contracts using Solidity
