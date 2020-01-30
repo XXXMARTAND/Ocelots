@@ -10,6 +10,7 @@ app.get('/test/', function(req,res) {
     var z = req.query.acc;
 
     web3.eth.getBalance(z, (err,bal)=>{balance=bal
+        console.log(balance);
         res.send(balance);
         })
 
